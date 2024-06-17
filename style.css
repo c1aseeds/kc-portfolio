@@ -1,0 +1,256 @@
+:root{
+  --brown: #43291C;
+  --darkbrown: #211515;
+  --lightbrown: #BBA08B;
+  --pastelbrown: #9C8E83;
+  --white: #E6D5C8;
+  --vcast: #18123B;
+  --hyperia: #000842;
+}
+
+*{
+  box-sizing: border-box;
+
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+  body {
+    background-color: #43291C; /* Set body background color */
+    margin: 0; /* Remove default margin */
+    font-family: "neulis-neue", sans-serif;
+    /* overflow: hidden; */
+  }
+  
+  nav {
+    background-color: #211515; /* Set navigation bar background color */
+    width: 100%;
+    padding-bottom: 2px; /* Add extra padding at the bottom */
+    position: fixed; /* Stick the navigation bar to the top */
+    top: 0; /* Position it at the top */
+    z-index: 1000; /* Ensure it's above other content */
+    padding: 0 5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 17px 16px; /* Increase the padding for top and bottom */
+    text-decoration: none;
+    position: relative; /* Set position to relative for pseudo-element */
+    transition: all 300ms;
+  }
+
+
+nav a:hover.portfolio::after,
+nav a:hover.about::after,
+nav a:hover.touch::after {
+  opacity: 1; /* Show the arrow only for specific links */
+}
+
+nav a:hover.logo::after{
+  opacity: 0;
+}
+
+  nav a:hover::after {
+    content: ""; /* Create the pseudo-element */
+    display: block;
+    position: absolute;
+    bottom: 0; /* Align at the bottom of the link */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; /* Adjust arrow width */
+    height: 10px; /* Adjust arrow height */
+    background-color: #fff; /* Arrow color */
+    border-radius: 50%; /* Make the arrow rounded */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Create a triangular shape */
+
+  }
+
+  
+
+  /* Styles for headline-text */
+
+  .headline-text {
+    margin-top: 5rem;
+    padding-top: 10rem;
+    position: relative;
+    text-align: center; /* Center-align the content */
+    height: 80vh; /* Make the container take the full viewport height */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    overflow: hidden; /* Hide overflow to ensure video doesn't exceed bounds */
+  }
+  
+  #background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2560px;
+    height: 2000px;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the video is behind other content */
+    opacity: 0.5; /* Set the opacity of the video */
+  }
+  
+  .headline-text h1,
+  .headline-text p,
+  .headline-text button {
+    position: relative;
+    z-index: 1; /* Ensure text and button are above the video */
+  }
+  
+  .headline-text h1 {
+    color: var(--white); /* Set h1 color to #BBA08B */
+    margin-bottom: 1px;
+    font-size: 70px;
+  }
+  
+  .headline-text p {
+    color: var(--white); /* Set p color to #9C8E83 */
+    font-size: 30px;
+  }
+  
+  /* Styles for the button */
+  .headline-text button {
+    padding: 10px 50px; /* Increase padding for larger width and height */
+    font-size: 25px; /* Increase font size */
+    background-color: #9E744A; /* Set button background color */
+    color: white; /* Set button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+    font-family: "neulis-neue", sans-serif;
+  }
+  
+  .headline-text button:hover {
+    background-color: #BBA08B; /* Change background color on hover */
+  }
+
+
+
+  /* container  */
+  
+
+  .container {
+    background-color: var(--darkbrown);
+    height: 80svh;
+    padding: 7rem;
+    display: grid;
+    align-content: center;
+  }
+  
+  .heading2 {
+    color: var(--white);
+    font-size: xx-large;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .paragraph2 {
+    padding: 0rem 3em 0rem 1.5rem;
+    color: var(--pastelbrown);
+    line-height: 1.5;
+    padding-right: 50rem;
+    font-size: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out 0.5s, transform 1s ease-out 0.5s;
+  }
+  
+  .contact {
+    color: var(--pastelbrown);
+    padding: 0rem 3em 0rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-decoration: none;
+  }
+  
+  .contact-info {
+    display: grid;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 30px;
+  }
+  
+  .contact-info a {
+    color: var(--pastelbrown);
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  /* footer */
+
+  footer {
+    background-color: var(--darkbrown); /* Same body color */
+    color: var(--white); /* Text color is white */
+    text-align: center;
+    padding: 10px 0; /* Add padding top and bottom */
+  }
+  
+  footer p {
+    font-size: 16px; /* Adjust font size as needed */
+  }
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .headline-text h1 {
+    font-size: 50px;
+  }
+
+  .headline-text p {
+    font-size: 20px;
+  }
+
+  .headline-text button {
+    padding: 8px 40px;
+    font-size: 20px;
+  }
+
+  
+  .paragraph2 {
+    padding-right: 10rem;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  nav {
+    padding: 0 2rem;
+  }
+
+  .headline-text h1 {
+    font-size: 40px;
+  }
+
+  .headline-text p {
+    font-size: 18px;
+  }
+
+  .headline-text button {
+    padding: 6px 30px;
+    font-size: 18px;
+  }
+}
+

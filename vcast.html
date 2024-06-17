@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio: Vcast News</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tln4plm.css">
+</head>
+<header>
+    <nav class="bg-content">
+        <a href="index.html" class="logo">Insert Logo Here</a>
+        <ul class="nav-links">
+            <!-- <a href="portfolio.html">Portfolio</a>
+            <a href="index.html">About Me</a>
+            <a href="index.html">Get In Touch!</a> -->
+        </ul>
+    </nav>
+</header>
+
+<body class="vcast-body">
+    
+    <div class="container bg-vcastc">
+        <div class="heading2">
+            <a href="portfolio.html" class="vcast-link"><b>Vcast.</b></a><span class="arrow"></span>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-pv">
+                <p><b>It all started from here...</b> </p>
+                <p>Tools: Figma, Adobe AI & INDD</p>
+                <p>
+                    Target Audience: 13-25</p>
+            </div>
+    
+            <div class="hero2-img">
+                <img src="img/Vcast/topicselection.png" alt="Sitemap placeholder">
+            </div>
+        </div>
+
+        <!-- <div class="hero-heading">
+
+            <div class="container-contentv">
+                <div class="paragraphv">
+                    <p>It all started from here...</p>
+                    <p>Tools: Figma, Adobe AI & INDD</p>
+                    <p>Target Audience: 13-25</p>
+                </div>
+
+                <div class="hero-img">
+                    <img src="img/Vcast/topicselection.png" alt="topic evidence">
+                
+                </div>
+
+            </div>
+
+
+            </div> -->
+            
+    </div>
+
+
+
+   
+                                 <!-- Vcast main above  -->
+
+                                 <!-- Vcast Others below -->
+
+    <div class="other-section">
+        <div class="grid-container">
+            <div class="other-img">
+                <img src="img/Vcast/persona1.png" alt="topic evidence">
+            </div>
+            <div class="other-img">
+                <img src="img/Vcast/p2.png" alt="topic evidence">
+            </div>
+            <div class="other-img">
+                <img src="img/Vcast/p3.png" alt="topic evidence">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="imgv">
+        <img src="img/Vcast/stylescape.png" alt="Image description">
+      </div>
+
+      <div class="other-text">
+        <p>This is the stylescape, at that time i didn’t know what does scatter pattern has anything to do with the news itself, why do in such direction? I question myself overtime, even to the point where i manage to finish the brand-style docs and yet i still unable to come into conclusion. At early stage things still look quite bleak not really quite piece together just yet. In the stylescape you able to see the inspo i am taking 
+            upon making the prototype. 
+            </p>
+    </div>
+
+    <div class="imgv">
+        <img src="img/Vcast/sitemap.png" alt="Image description">
+      </div>
+    </div>
+
+    <div class="the-rest">
+        <div class="grid-container-rest">
+            <div class="other-img">
+                <img src="img/Vcast/earlystage logo.png" alt="topic evidence">
+            </div>
+            <div class="other-img">
+                <img src="img/Vcast/lofi.png" alt="topic evidence">
+            </div>
+        </div>
+    </div>
+    
+    <div class="other-text">
+        <p>The pieces started to connect, after i finish making the Site-map. Moreover, when i start doing the lofi stages all the way through Hi-fi stages. The scatter is to symbolize the imbalance and uncertainty toward how does Vtube can impact the Gen-Z in wanting to read or watch the news, moreover it also represent the aesthetic in today’s generation too. Use of the color palette is to match with video-games atmosphere, to captivate viewers eyes in wanting to watch the news. 
+            </p>
+
+            <p>Throughout the end of the progression, i encounter some challenges especially toward creating the ‘subtle-animation’. Such as for creating the image slider effect, and specific kind of hover effect.  (Refer image down below). 
+            </p>
+    </div>
+
+    <div class="the-rest">
+        <div class="grid-container-rest">
+            <div class="other-img">
+                <img src="img/Vcast/hovereffect1.png" alt="topic evidence">
+            </div>
+            <div class="other-img">
+                <img src="img/Vcast/hovereffect2.png" alt="topic evidence">
+            </div>
+        </div>
+    </div>
+
+    <div class="other-text">
+        <p>Nonetheless, in the end I manage to figure it all out within a week of constant frustration on why would i go such lengthy process in wanting to add in subtle-details. Turns out in the end i manage to execute the project quite well. 
+            </p>
+    </div>
+
+    <div class="bigv-text">
+        <p>I am quite pleased for my very first time of using Figma at that time, and my love for Figma has only just begin.
+            </p>
+    </div>
+
+       <!-- Video -->
+
+       <div class="imgv">
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/d5Sto0mcoaU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <div class="smallv-text">
+        <p>That is all folks, stay tuned for the NEXT BROADCAST only at, Vcast News!
+            </p>
+    </div>
+    
+    
+    <script>
+        const arrows = document.querySelectorAll('.arrow');
+
+        function handleScroll() {
+            arrows.forEach(arrow => {
+                if (window.scrollY > 100) {
+                    arrow.parentElement.classList.add('stretch'); // Add the stretch animation class to the parent div
+                } else {
+                    arrow.parentElement.classList.remove('stretch'); // Remove the stretch animation class from the parent div
+                }
+            });
+        } 
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kennydesign: Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tln4plm.css">
+</head>
+<header>
+    <nav>
+        <a href="index.html" class="logo">KC</a>
+        <ul class="nav-links">
+            <a href="portfolio.html">Portfolio</a>
+            <a href="index.html">About Me</a>
+            <a href="index.html">Get In Touch!</a>
+        </ul>
+    </nav>
+</header>
+<body>
+    <div class="d-container">
+        <div class="heading2">
+            <a href="portfolio.html" class="vcast-link"><b>Recent.</b></a><span class="arrow"></span>
+        </div>
+        <div class="container-content">
+            <a href="hyperia.html" class="project-link">
+                <img src="img/Hyperia/mockup1.png" alt="Hyperia Project" class="project-image">
+                <div class="project-overlay">
+                    <p class="project-text">Hyperia Project</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="container bg-content">
+        <div class="heading2"><h1>2023.</h1><span class="arrow"></span></div>
+       
+        <div class="container-content-2">
+            <a href="vcast.html" class="project-link">
+                <img src="img/Vcast/1st SCREEN (HEADLINE SCREEN).png" alt="Hyperia Project" class="project-image">
+                <div class="project-overlay">
+                    <p class="project-text">Vcast Prototype</p>
+                </div>
+            </a>
+
+            <a href="diaspora.html" class="project-link">
+                <img src="img/diaspora/mockup 14 inch.png" alt="Hyperia Project" class="project-image">
+                <div class="project-overlay">
+                    <p class="project-text">Passion Project - Diaspora</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    
+
+    
+
+    <script>
+        const arrows = document.querySelectorAll('.arrow');
+
+        function handleScroll() {
+            arrows.forEach(arrow => {
+                if (window.scrollY > 100) {
+                    arrow.parentElement.classList.add('stretch'); // Add the stretch animation class to the parent div
+                } else {
+                    arrow.parentElement.classList.remove('stretch'); // Remove the stretch animation class from the parent div
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>

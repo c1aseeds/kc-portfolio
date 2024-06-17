@@ -1,0 +1,758 @@
+/* Adjustment */
+
+:root{
+    --brown: #43291C;
+    --darkbrown: #211515;
+    --lightbrown: #BBA08B;
+    --pastelbrown: #9C8E83;
+    --white: #E6D5C8;
+    --vcast: #18123B;
+    --hyperia: #000842;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--darkbrown); /* Set body background color */
+    margin: 0; /* Remove default margin */
+    margin-top: 0.1rem;
+    font-family: "neulis-neue", sans-serif;
+    /* overflow: hidden; */
+  }
+
+/* Adjustment */
+
+/* Nav below */
+
+  nav {
+    background-color: #211515; /* Set navigation bar background color */
+    width: 100%;
+    padding-bottom: 2px; /* Add extra padding at the bottom */
+    position: fixed; 
+    top: 0; 
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem 2rem;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+  
+  nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem; /* Increase the padding for top and bottom */
+    text-decoration: none;
+    position: relative; /* Set position to relative for pseudo-element */
+    transition: all 300ms;
+  }
+
+  a logo {
+    font-size: 30px;
+  }
+
+
+nav a:hover.portfolio::after,
+nav a:hover.about::after,
+nav a:hover.touch::after {
+  opacity: 1; /* Show the arrow only for specific links */
+}
+
+nav a:hover.logo::after{
+  opacity: 0;
+}
+
+  nav a:hover::after {
+    content: ""; /* Create the pseudo-element */
+    display: block;
+    position: absolute;
+    bottom: 0; /* Align at the bottom of the link */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px; /* Adjust arrow width */
+    height: 10px; /* Adjust arrow height */
+    background-color: #fff; /* Arrow color */
+    border-radius: 50%; /* Make the arrow rounded */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Create a triangular shape */
+
+  }
+
+  /* Nav */
+
+/* Container below */
+
+.container {
+    background-color: var(--darkbrown);
+    /* border: 1px solid white; */
+    display: grid;
+    align-content: center;
+    padding: 5rem;
+    height: 60svh;
+}
+
+.bg-content {
+  background-color: #18123B;
+  padding: 5rem;
+}
+
+.bg-vcastc{
+  background-color: #18123B;
+  margin-top: 5%;
+}
+
+
+.container-p {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 20px; /* Add gap between items */
+}
+
+
+  
+.container-content {
+  position: relative;
+  max-width: 100%; /* Adjust the maximum width as needed */
+  overflow: hidden;
+}
+
+.container-content-2{
+  position: relative;
+  max-width: 100%; /* Adjust the maximum width as needed */
+  overflow: hidden;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 50px; /* Add gap between items */
+  gap: 10rem;
+}
+
+.project-link {
+  position: relative;
+  overflow: hidden; /* Ensure overlay is contained within the link */
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-overlay {
+  position: absolute;
+  top: -900%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: var(--white);
+  padding: 10px 20px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  font-weight: 600;
+  opacity: 0; /* Initially hide the overlay text */
+  text-align: center;
+}
+
+.project-link:hover .project-image {
+  opacity: 0.3; /* Adjust the opacity on hover */
+}
+
+.project-link:hover .project-overlay {
+  transform: translate(-50%, -50%) scale(1); /* Show the overlay on hover */
+  opacity: 1; /* Show the overlay text */
+}
+
+
+.video-overlay {
+  position: relative;
+  width: 30%; /* Adjust the width of the overlay */
+  overflow: hidden; /* Ensure the overlay is contained within its container */
+  display: flex; /* Use flexbox to center the content */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center;
+}
+
+.overlay-text {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0; /* Initially hide the text */
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+.container-content img{
+  width: 604px;
+  height: 350px;
+}
+
+.container-content-2 img{
+  width: 604px;
+  height: 350px;
+}
+
+
+
+
+
+/* Vcast */
+
+.vcast-body {
+  background-color: #18123B; /* Set body background color for vcast.html */
+  margin: 0; /* Remove default margin */
+  font-family: "neulis-neue", sans-serif;
+  /* overflow: hidden; */
+}
+
+.vcast-container {
+  width: 2560px; /* Set fixed width */
+  margin: 0 auto; /* Center the container */
+  background-color: var(--vcast);
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping */
+  gap: 1.5rem; /* Adjust gap as needed */
+}
+
+.vcast-bg-color{
+  background-color: var(--vcast);
+}
+
+
+.hero-heading {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  align-items: flex-start; /* Align items to the start */
+  justify-content: center; /* Center the images */
+  gap: 1.5rem; /* Adjust gap as needed */
+}
+
+.hero-img {
+  max-width: 450px;
+  display: flex; /* Ensure the images stay next to each other */
+  justify-content: center; /* Center the images */
+}
+
+.hero-img img {
+  max-width: 100%; /* Ensure images are responsive */
+  margin: 0; /* Remove margin between images */
+}
+
+.paragraphv {
+  color: var(--pastelbrown);
+  margin-right: auto; /* Move paragraphv to the left */
+}
+
+.container-contentv {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: flex-start; /* Align content to the left */
+  line-height: 1.5;
+}
+
+
+
+/* Vcast */
+
+
+/* Vcast Others */
+
+.other-section {
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem; /* Add margin to separate from the previous content */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  grid-gap: 10px; /* Add a fixed gap of 10px between grid items */
+  grid-auto-flow: dense; /* Fill gaps in the grid */
+  align-items: center;
+  justify-content: center;
+}
+
+.other-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Set a fixed height for the container */
+  margin-bottom: 2rem;
+  margin-top: -4rem;
+}
+
+.other-img img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: 100%; /* Ensure image takes up full height of the container */
+  object-fit: cover; /* Resize the image to cover the container */
+}
+
+
+.other-text {
+  color: var(--pastelbrown);
+  text-align: left;
+  padding-right: 60rem; /* Initial padding */
+  padding-left: 25rem; /* Initial padding */
+  margin-left: -10%; /* Offset the text from the center */
+  margin-right: -40%; /* Offset the text from the center */
+  line-height: 1.5;
+  margin-top: 3rem;
+  font-size: 20px;
+}
+
+.bigv-text{
+  color: var(--white);
+  text-align: center;
+  padding-right: 60rem; /* Initial padding */
+  padding-left: 30rem; /* Initial padding */
+  margin-left: -5%; /* Offset the text from the center */
+  margin-right: -30%; /* Offset the text from the center */
+  line-height: 1.5;
+  margin-top: 3rem;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+.smallv-text{
+  color: var(--white);
+  text-align: center;
+  padding-right: 40rem; /* Initial padding */
+  padding-left: 0rem; /* Initial padding */
+  margin-left: -5%; /* Offset the text from the center */
+  margin-right: -30%; /* Offset the text from the center */
+  line-height: 1.5;
+  margin-top: 3rem;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.imgv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.imgv img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensure the image fits without stretching */
+  margin-top: 1rem;
+}
+
+.imgv video {
+  max-width: 100%; /* Ensure video is responsive */
+  max-height: 100%; /* Ensure video takes up full height of the container */
+  object-fit: cover; /* Resize the video to cover the container */
+  align-items: center;
+  justify-content: center;
+}
+
+.the-rest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem; /* Adjust the gap as needed */
+  padding-left: 4rem;
+}
+
+.grid-container-rest {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+  grid-gap: 10px; /* Add a fixed gap between grid items */
+  grid-auto-flow: dense; /* Fill gaps in the grid */
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 2570px) {
+
+  .d-container{
+    width: 100%;
+    padding: 5rem;
+  }
+
+  .vcast-container {
+      width: 100%; /* Make container full width */
+      padding: 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .hero-heading {
+      flex-wrap: wrap; /* Allow wrapping */
+  }
+
+  .hero-img {
+      max-width: 100%; /* Allow images to resize */
+      padding-right: 0; /* Remove padding for smaller screens */
+      justify-content: center; /* Ensure images are centered */
+  }
+
+  .hero-img img {
+      max-width: 50%; /* Resize images to fit within the container */
+  }
+
+  .paragraphv {
+      padding: 0 1.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .other-text {
+    padding-right: 80rem; /* Initial padding */
+    padding-left: 45rem; /* Initial padding */
+    margin-left: -10%; /* Offset the text from the center */
+    margin-right: -40%; /* Offset the text from the center */
+    line-height: 1.5;
+  }
+
+  
+}
+
+@media (max-width: 1024px) {
+
+  .container-content-2 img{
+    width: 504px;
+    height: 350px;
+  }
+
+  .other-section {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+}
+.other-img {
+  height: auto; /* Allow images to resize based on content */
+}
+
+.other-img img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Allow image height to adjust based on content */
+  margin-bottom: 30px; /* Add space between images */
+}
+
+.other-container {
+  padding: 2rem; /* Add padding around the container */
+}
+
+.other-text{
+  padding-right: 22rem; /* Adjust padding for smaller screens */
+    padding-left: 10rem; /* Adjust padding for smaller screens */
+    margin-left: -10%; /* Offset the text from the center */
+    margin-right: -30%; /* Offset the text from the center */
+    line-height: 1.5;
+}
+
+.bigv-text{
+  color: var(--pastelbrown);
+  text-align: center;
+  padding-right: 20rem; /* Initial padding */
+  padding-left: 5rem; /* Initial padding */
+  margin-left: -5%; /* Offset the text from the center */
+  margin-right: -30%; /* Offset the text from the center */
+  line-height: 1.5;
+  margin-top: 6rem;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+
+
+}
+
+@media (max-width: 768px) {
+  .other-text{
+  padding-right: 5rem; /* Adjust padding for even smaller screens */
+  padding-left: 8rem; /* Adjust padding for even smaller screens */
+  margin-left: -3%; /* Offset the text from the center */
+  margin-right: -5%; /* Offset the text from the center */
+  line-height: 1.5;
+  }
+
+  .container {
+    height: 80svh;
+}
+
+}
+
+/* Vcast */
+
+
+
+/* diaspora */
+
+.d-container {
+  background-color: var(--darkbrown);
+  /* border: 1px solid white; */
+  display: grid;
+  align-content: center;
+  padding: 5rem;
+  margin-top: 10%;
+}
+
+.d-textgrid{
+  color: var(--pastelbrown);
+  padding: 0rem 3em 0rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+}
+
+.d-paragraph{
+  padding: 0rem 10em 0rem 5.5rem;
+  color: var(--pastelbrown);
+  font-size: 30px;
+}
+
+.d2-paragraph{
+  padding: 2rem 6em 0rem 10.5rem;
+  color: var(--white);
+  font-size: 30px;
+  margin-bottom: 3rem;
+}
+
+.d2-paragraph-exp{
+  padding: 2rem 8em 0rem 10.5rem;
+  color: var(--pastelbrown);
+  font-size: 20px;
+  margin-bottom: -2.5rem;
+  line-height: 1.5;
+}
+
+.d-hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Adjust the gap between hero-pv and hero2-img */
+  margin-top: 1rem; /* Adjust the margin between heading and hero-content */
+  padding-left: 45rem;
+}
+
+.d-hero-p {
+  text-align: left;
+  font-size: 20px;
+  color: var(--white);
+  padding: 0 1rem;
+}
+
+.hero2-img {
+  max-width: 850px;
+}
+
+.hero2-img img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.d-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px; /* Add a fixed gap of 10px between grid items */
+  grid-auto-flow: dense;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-other-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Set a fixed height for the container */
+  margin-bottom: 1rem;
+  margin-top: -1rem;
+}
+
+.d-other-img img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: 100%; /* Ensure image takes up full height of the container */
+  object-fit: cover; /* Resize the image to cover the container */
+}
+
+/* Adjust grid column for each image */
+.d-other-img:nth-child(1),
+.d-other-img:nth-child(2) {
+  grid-column: 1 / span 2; /* Span 2 columns */
+}
+
+.d-other-img:nth-child(3),
+.d-other-img:nth-child(4) {
+  grid-column: 3 / span 2; /* Span 2 columns */
+}
+
+
+/* diaspora */
+
+/* hyperia */
+
+.h-body-color{
+  background-color: var(--hyperia);
+}
+
+.h-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.h-container img {
+  height: 100%;
+  width: auto;
+  max-width: 400px; /* Limit the width to 500px */
+  margin-left: 20rem;
+}
+
+.h-container p {
+  color: var(--white); /* Set text color */
+  font-size: 18px; /* Set font size */
+  margin: 0; /* Remove default margin */
+  padding-left: 5rem;
+  padding-right: 20rem;
+  line-height: 1.5;
+}
+
+.h-container-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.h-container-left img {
+  height: 100%;
+  width: auto;
+  max-width: 400px; /* Limit the width to 500px */
+  margin-right: 50rem;
+}
+
+.h-container-left p {
+  color: var(--white); /* Set text color */
+  font-size: 18px; /* Set font size */
+  margin: 0; /* Remove default margin */
+  padding-left: 40rem;
+  padding-right: 5rem;
+  line-height: 1.5;
+}
+
+
+.h-imgv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100vh;
+  margin-top: 10rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px; /* Adjust the gap between the grid items */
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.h-imgv iframe {
+  width: 100%; /* Make iframe responsive */
+  height: 450px;
+}
+
+/* hyperia */
+
+/* Text adjustment */
+
+.heading2 {
+  color: var(--white);
+  font-size: xx-large;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* Adjust the gap between hero-pv and hero2-img */
+  margin-top: 1rem; /* Adjust the margin between heading and hero-content */
+}
+
+.hero-pv {
+  text-align: left;
+  font-size: 20px;
+  color: var(--white);
+  padding: 0 1rem;
+}
+
+.hero2-img {
+  max-width: 850px;
+}
+
+.hero2-img img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+.vcast-link {
+  font-size: 5rem;
+  text-decoration: none;
+  color: var(--white);
+  position: relative;
+  font-weight: 800;
+}
+
+.vcast-link::before {
+  content: ""; /* The Arrow */
+  display: block;
+  position: absolute;
+  left: -100px; /* Adjust the initial position of the arrow */
+  top: 50%; /* Position it vertically centered */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 2px solid transparent; /* Create the arrow shape */
+  border-bottom: 2px solid transparent; /* Create the arrow shape */
+  border-right: 80px solid var(--lightbrown); /* Arrow color and size */
+  border-radius: 5px; /* Make the arrow rounded */
+  transition: width 0.8s ease-in-out, border-right-width 0.8s ease-in-out; /* Add transition for stretch effect */
+}
+
+
+/*the stretch animation */
+.stretch .vcast-link::before {
+  width: 1px; /* Adjust the final width of the arrow */
+  border-right-width: 10px; /* Adjust the final width of the right border */
+}
+
+  .paragraph2{
+    padding: 0rem 3em 0rem 1.5rem;
+    color: var(--pastelbrown);
+
+  }
+
+/* Text adjustment */
+
+
+
