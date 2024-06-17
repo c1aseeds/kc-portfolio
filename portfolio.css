@@ -58,10 +58,6 @@
     transition: all 300ms;
   }
 
-  a logo {
-    font-size: 30px;
-  }
-
 
 nav a:hover.portfolio::after,
 nav a:hover.about::after,
@@ -432,6 +428,12 @@ nav a:hover.logo::after{
 
 @media (max-width: 1024px) {
 
+  .imgv {
+    max-height: 100vh;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+
   .container-content-2 img{
     width: 504px;
     height: 350px;
@@ -442,6 +444,8 @@ nav a:hover.logo::after{
 }
 .other-img {
   height: auto; /* Allow images to resize based on content */
+  width:80%;
+  padding-right: 2rem;
 }
 
 .other-img img {
@@ -455,9 +459,9 @@ nav a:hover.logo::after{
 }
 
 .other-text{
-  padding-right: 22rem; /* Adjust padding for smaller screens */
-    padding-left: 10rem; /* Adjust padding for smaller screens */
-    margin-left: -10%; /* Offset the text from the center */
+  padding-right: 30rem; /* Adjust padding for smaller screens */
+    padding-left: 20rem; /* Adjust padding for smaller screens */
+    margin-left: -20%; /* Offset the text from the center */
     margin-right: -30%; /* Offset the text from the center */
     line-height: 1.5;
 }
@@ -473,6 +477,51 @@ nav a:hover.logo::after{
   margin-top: 6rem;
   font-size: 30px;
   font-weight: 800;
+}
+
+.smallv-text{
+  padding-left: 10rem;
+  padding-right: 30rem ;
+  text-align: center;
+}
+
+.d2-paragraph{
+  padding: 2rem 5rem 0rem 1.5rem;
+  color: var(--white);
+  font-size: 30px;
+  margin-bottom: 3rem;
+  margin-left: -20%; /* Offset the text from the center */
+  margin-right: -5%; /* Offset the text from the center */
+  line-height: 1.5;
+}
+
+.d2-paragraph-exp{
+  margin-right: -20%;
+  margin-left: -20%;
+  margin-bottom: -2.5rem;
+  line-height: 1.5;
+}
+
+.h-container {
+  margin-left: -30%;
+  margin-right: -10%;
+}
+
+
+.h-container img {
+  margin-right: -50%;
+  padding-left: 10rem;
+
+}
+
+.h-container p {
+  padding-right: 20rem;
+  line-height: 1.5;
+}
+
+nav {
+  padding: 0 5rem 2rem;
+  padding-right: 25rem; 
 }
 
 
@@ -621,14 +670,13 @@ nav a:hover.logo::after{
   width: auto;
   max-width: 400px; /* Limit the width to 500px */
   margin-left: 20rem;
+  margin-right: 2rem;
 }
 
 .h-container p {
   color: var(--white); /* Set text color */
   font-size: 18px; /* Set font size */
   margin: 0; /* Remove default margin */
-  padding-left: 5rem;
-  padding-right: 20rem;
   line-height: 1.5;
 }
 
@@ -650,7 +698,7 @@ nav a:hover.logo::after{
   color: var(--white); /* Set text color */
   font-size: 18px; /* Set font size */
   margin: 0; /* Remove default margin */
-  padding-left: 40rem;
+  padding-left: 50rem;
   padding-right: 5rem;
   line-height: 1.5;
 }
