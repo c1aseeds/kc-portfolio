@@ -8,6 +8,7 @@
     --white: #E6D5C8;
     --vcast: #18123B;
     --hyperia: #000842;
+    --nostalgia: #D0876F;
   }
   
   *{
@@ -392,6 +393,11 @@ nav a:hover.logo::after{
     padding: 5rem;
   }
 
+  .r-container{
+    width: 100%;
+    padding: 5rem;
+  }
+
   .vcast-container {
       width: 100%; /* Make container full width */
       padding: 2rem; /* Adjust padding for smaller screens */
@@ -417,6 +423,14 @@ nav a:hover.logo::after{
 
   .other-text {
     padding-right: 80rem; /* Initial padding */
+    padding-left: 45rem; /* Initial padding */
+    margin-left: -10%; /* Offset the text from the center */
+    margin-right: -40%; /* Offset the text from the center */
+    line-height: 1.5;
+  }
+
+  .r-other-text {
+    padding-right: 50rem; /* Initial padding */
     padding-left: 45rem; /* Initial padding */
     margin-left: -10%; /* Offset the text from the center */
     margin-right: -40%; /* Offset the text from the center */
@@ -466,6 +480,7 @@ nav a:hover.logo::after{
     line-height: 1.5;
 }
 
+
 .bigv-text{
   color: var(--pastelbrown);
   text-align: center;
@@ -480,6 +495,12 @@ nav a:hover.logo::after{
 }
 
 .smallv-text{
+  padding-left: 10rem;
+  padding-right: 30rem ;
+  text-align: center;
+}
+
+.r-small-text{
   padding-left: 10rem;
   padding-right: 30rem ;
   text-align: center;
@@ -524,6 +545,30 @@ nav {
   padding-right: 25rem; 
 }
 
+.r-other-img {
+  height: auto; /* Allow images to resize based on content */
+  width:80%;
+  padding-right: 2rem;
+}
+
+.r-other-img img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Allow image height to adjust based on content */
+  margin-bottom: 30px; /* Add space between images */
+}
+
+.r-other-container {
+  padding: 2rem; /* Add padding around the container */
+}
+
+.r-other-text{
+  padding-right: 30rem; /* Adjust padding for smaller screens */
+    padding-left: 20rem; /* Adjust padding for smaller screens */
+    margin-left: -20%; /* Offset the text from the center */
+    margin-right: -30%; /* Offset the text from the center */
+    line-height: 1.5;
+}
+
 
 
 }
@@ -540,6 +585,35 @@ nav {
   .container {
     height: 80svh;
 }
+
+.r-container {
+  height: 80svh;
+}
+
+.r-other-text{
+  padding-right: 5rem; /* Adjust padding for even smaller screens */
+  padding-left: 8rem; /* Adjust padding for even smaller screens */
+  margin-left: -3%; /* Offset the text from the center */
+  margin-right: -5%; /* Offset the text from the center */
+  line-height: 1.5;
+  }
+
+.r-other-img {
+  height: auto; /* Allow images to resize based on content */
+  width:80%;
+  padding-right: 2rem;
+}
+
+.r-other-img img {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto; /* Allow image height to adjust based on content */
+  margin-bottom: 30px; /* Add space between images */
+}
+
+.r-other-container {
+  padding: 2rem; /* Add padding around the container */
+}
+
 
 }
 
@@ -649,7 +723,6 @@ nav {
   grid-column: 3 / span 2; /* Span 2 columns */
 }
 
-
 /* diaspora */
 
 /* hyperia */
@@ -728,10 +801,181 @@ nav {
 
 /* hyperia */
 
+
+/* Reminisce. */
+
+.r-imgv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 120vh;
+  margin-top: 10rem;
+}
+
+
+.r-imgv iframe {
+  width: 100%; /* Make iframe responsive */
+  height: 450px;
+}
+
+.r-small-text{
+  color: var(--hyperia);
+  text-align: center;
+  padding-right: 20rem; /* Initial padding */
+  padding-left: 0rem; /* Initial padding */
+  margin-left: -5%; /* Offset the text from the center */
+  margin-right: -30%; /* Offset the text from the center */
+  line-height: 1.5;
+  margin-top: 3rem;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.r-textgrid{
+  color: var(--hyperia);
+  padding: 0rem 3em 0rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+
+}
+
+.r-paragraph{
+  padding: 0rem 10em 0rem 5.5rem;
+  color: var(--hyperia);
+  font-size: 30px;
+}
+
+.r2-paragraph{
+  padding: 2rem 6em 0rem 10.5rem;
+  color: var(--hyperia);
+  font-size: 30px;
+  margin-bottom: 3rem;
+}
+
+.r2-paragraph-exp{
+  padding: 2rem 8em 0rem 10.5rem;
+  color: var(--hyperia);
+  font-size: 20px;
+  margin-bottom: -2.5rem;
+  line-height: 1.5;
+}
+
+
+.r-body-color{
+  background-color: var(--nostalgia);
+}
+
+.r-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Add some padding for spacing */
+}
+
+.r-container img {
+  height: 100%;
+  width: auto;
+  max-width: 400px; /* Limit the width to 500px */
+  margin-left: 20rem;
+  margin-right: 2rem;
+}
+
+.r-container p {
+  color: var(--hyperia); /* Set text color */
+  font-size: 18px; /* Set font size */
+  margin: 0; /* Remove default margin */
+  line-height: 1.5;
+}
+
+.r-container-left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px; /* Add some padding for spacing */
+}
+
+.r-container-left img {
+  height: 100%;
+  width: auto;
+  max-width: 400px; /* Limit the width to 500px */
+  margin-right: 50rem;
+}
+
+.r-container-left p {
+  color: var(--hyperia); /* Set text color */
+  font-size: 18px; /* Set font size */
+  margin: 0; /* Remove default margin */
+  padding-left: 50rem;
+  padding-right: 5rem;
+  line-height: 1.5;
+}
+
+
+.r-imgv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100vh;
+  margin-top: 10rem;
+}
+
+.r-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 20px; /* Adjust the gap between the grid items */
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.r-imgv iframe {
+  width: 100%; /* Make iframe responsive */
+  height: 450px;
+}
+
+.r-the-rest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7rem; /* Adjust the gap as needed */
+  padding-left: 4rem;
+}
+
+.r-grid-container-rest {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for the grid */
+  grid-gap: 10px; /* Add a fixed gap between grid items */
+  grid-auto-flow: dense; /* Fill gaps in the grid */
+  align-items: center;
+  justify-content: center;
+}
+
+.r-other-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px; /* Set a fixed height for the container */
+  margin-bottom: 2rem;
+  margin-top: -4rem;
+}
+
+
+/* Reminisce. */
+
+
 /* Text adjustment */
 
 .heading2 {
   color: var(--white);
+  font-size: xx-large;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.r-heading2 {
+  color: var(--hyperia);
   font-size: xx-large;
   position: relative;
   margin-bottom: 1rem;
@@ -787,9 +1031,38 @@ nav {
   transition: width 0.8s ease-in-out, border-right-width 0.8s ease-in-out; /* Add transition for stretch effect */
 }
 
+.r-link {
+  font-size: 5rem;
+  text-decoration: none;
+  color: var(--darkbrown);
+  position: relative;
+  font-weight: 800;
+}
+
+.r-link::before {
+  content: ""; /* The Arrow */
+  display: block;
+  position: absolute;
+  left: -100px; /* Adjust the initial position of the arrow */
+  top: 50%; /* Position it vertically centered */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 2px solid transparent; /* Create the arrow shape */
+  border-bottom: 2px solid transparent; /* Create the arrow shape */
+  border-right: 80px solid var(--lightbrown); /* Arrow color and size */
+  border-radius: 5px; /* Make the arrow rounded */
+  transition: width 0.8s ease-in-out, border-right-width 0.8s ease-in-out; /* Add transition for stretch effect */
+}
+
 
 /*the stretch animation */
 .stretch .vcast-link::before {
+  width: 1px; /* Adjust the final width of the arrow */
+  border-right-width: 10px; /* Adjust the final width of the right border */
+}
+
+.stretch .r-link::before {
   width: 1px; /* Adjust the final width of the arrow */
   border-right-width: 10px; /* Adjust the final width of the right border */
 }
